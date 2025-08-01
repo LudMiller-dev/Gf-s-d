@@ -1,206 +1,174 @@
-
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Te Amo ❤️</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: #050505;
-      height: 100%;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <title>Para Mia, en su día ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffe6f0;
+            font-family: 'Marck Script', cursive;
+            color: #4d2c3d;
+            text-align: center;
+        }h1 {
+        margin-top: 30px;
+        font-size: 2.5em;
+        color: #d63384;
     }
 
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
     }
 
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
+    .envoltura-sobre {
+        position: relative;
+        width: 320px;
+        height: 220px;
+        background-color: #ffcce0;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
     }
 
-    .center-message {
-      font-family: 'Courier New', monospace;
-      color: #ff69b4;
-      font-size: 6vw;
-      text-align: center;
-      opacity: 0.85;
-      text-shadow: 0 0 2px #ff69b4, 0 0 4px #ff1493;
-      animation: aparecer 3s ease-in-out;
+    .sobre {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff0f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    @keyframes aparecer {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 0.85; transform: scale(1); }
+    .carta {
+        width: 90%;
+        height: 90%;
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        overflow-y: auto;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
     }
-  </style>
+
+    .contenido p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .corazon {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-45deg);
+        width: 40px;
+        height: 40px;
+        background-color: #ff3366;
+        animation: latido 1s infinite;
+    }
+
+    .corazon::before,
+    .corazon::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #ff3366;
+        border-radius: 50%;
+    }
+
+    .corazon::before {
+        top: -20px;
+        left: 0;
+    }
+
+    .corazon::after {
+        left: 20px;
+        top: 0;
+    }
+
+    @keyframes latido {
+        0% { transform: scale(1) rotate(-45deg); }
+        25% { transform: scale(1.1) rotate(-45deg); }
+        50% { transform: scale(1) rotate(-45deg); }
+        75% { transform: scale(1.2) rotate(-45deg); }
+        100% { transform: scale(1) rotate(-45deg); }
+    }
+
+    code {
+        background: #ffe6f0;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.95em;
+        color: #c9184a;
+    }
+
+    @media screen and (max-width: 480px) {
+        .envoltura-sobre {
+            width: 90%;
+            height: auto;
+        }
+        .carta {
+            padding: 15px;
+        }
+        .contenido p {
+            font-size: 1em;
+        }
+    }
+</style>
+
 </head>
 <body>
+    <h1>¡Feliz Día de la Novia, mi amor! ❤️</h1>
+    <div class="contenedor">
+        <div class="envoltura-sobre">
+            <div class="sobre">
+                <div class="carta">
+                    <div class="contenido">
+                        <strong>Hola, mi niña</strong>
+                        <p>
+                            Hoy es el día oficial de las novias, pero para mí, cada día es una razón para celebrar que te tengo en mi vida. Al principio, mi amor era un misterio, como esa carta que te envié y que tardaste 2 meses en descifrar. Ahora es tan real y claro como cada palabra que te escribo.<br><br>Aún con un océano de distancia, mi corazón late más rápido cuando veo una notificación tuya. Y aunque no estamos juntos para celebrarlo, tu presencia me da una paz y una alegría que no podría describir. Siempre estaré esperando aquel día en que podamos volver a vernos.<br><br>
 
-<audio autoplay loop playsinline>
-  <source src="https://cdn.pixabay.com/download/audio/2023/03/06/audio_090cadb9ef.mp3?filename=romantic-memories-139702.mp3" type="audio/mp3">
-</audio>
+                        Gracias por ser mi alegría, mi confidente y la persona que me enseñó a amar de verdad. Gracias por ser la razón de mi sonrisa a diario.<br><br>
 
-<canvas id="canvas"></canvas>
+                        Feliz Día de la Novia, mi amor. <br> Con todo mi código (y mi corazón), <br> Tu niño enamorado.<br>
+                        <span style="font-size: 0.9em; color: grey;">PD: Si esta carta fuera un programa, su salida sería:</span> <br> <code>"Te amo, y siempre te elegiré."</code>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="corazon"></div>
+    </div>
+</div>
 
-<div class="overlay">
-  <div class="center-message">TE AMO MIA ❤️</div>
+<div style="text-align:center; margin-top: 10px;">
+    <span id="iconoMusica" style="font-size: 1.5em; cursor: pointer;">🎶</span>
+    <audio id="miMusica" src="Musique.mp3" loop style="display:none;"></audio>
 </div>
 
 <script>
-  const canvas = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
-  let width = canvas.width = window.innerWidth;
-  let height = canvas.height = window.innerHeight;
+    const iconoMusica = document.getElementById('iconoMusica');
+    const miMusica = document.getElementById('miMusica');
+    let reproduciendo = false;
 
-  const fontSize = 16;
-  let columns = Math.floor(width / (fontSize * 4));
-  let drops = new Array(columns).fill(1);
-
-  const colors = ['#ff69b4', '#ff1493', '#ffa07a', '#ffc0cb', '#db7093', '#ffb6c1'];
-
-  const galaxy = [];
-  for (let i = 0; i < 400; i++) {
-    galaxy.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      size: Math.random() * 6 + 3,
-      speedX: (Math.random() - 0.5) * 0.3,
-      speedY: (Math.random() - 0.5) * 0.3,
-      opacity: Math.random() * 0.15 + 0.05,
-      color: colors[Math.floor(Math.random() * colors.length)]
+    iconoMusica.addEventListener('click', function() {
+        if (reproduciendo) {
+            miMusica.pause();
+            reproduciendo = false;
+            iconoMusica.textContent = '🎶';
+        } else {
+            miMusica.play();
+            reproduciendo = true;
+            iconoMusica.textContent = '⏸️';
+        }
     });
-  }
-
-  function drawGalaxy() {
-    galaxy.forEach((star) => {
-      star.x += star.speedX;
-      star.y += star.speedY;
-
-      if (star.x < 0) star.x = width;
-      if (star.x > width) star.x = 0;
-      if (star.y < 0) star.y = height;
-      if (star.y > height) star.y = 0;
-
-      ctx.globalAlpha = star.opacity;
-      ctx.font = `${star.size}px monospace`;
-      ctx.fillStyle = star.color;
-      ctx.fillText("❤", star.x, star.y);
-    });
-    ctx.globalAlpha = 1;
-  }
-
-  const hearts = [];
-  function createHeart() {
-    hearts.push({
-      x: Math.random() * width,
-      y: height + 20,
-      size: 30 + Math.random() * 20,
-      speed: 1 + Math.random() * 1.5,
-      opacity: 0.5 + Math.random() * 0.5
-    });
-  }
-
-  function drawHearts() {
-    hearts.forEach((h, index) => {
-      ctx.globalAlpha = h.opacity;
-      ctx.font = `${h.size}px monospace`;
-      ctx.fillStyle = '#ff69b4';
-      ctx.fillText("❤", h.x, h.y);
-      h.y -= h.speed;
-      if (h.y < -50) hearts.splice(index, 1);
-    });
-    ctx.globalAlpha = 1;
-  }
-
-  const fireworks = [];
-  function createExplosion(x = null, y = null) {
-    const count = 30 + Math.floor(Math.random() * 30);
-    x = x ?? Math.random() * width;
-    y = y ?? Math.random() * height / 2;
-    for (let i = 0; i < count; i++) {
-      const angle = (Math.PI * 2 * i) / count;
-      const speed = Math.random() * 4 + 2;
-      fireworks.push({
-        x, y,
-        dx: Math.cos(angle) * speed,
-        dy: Math.sin(angle) * speed,
-        alpha: 1,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        text: "❤",
-        size: 30 + Math.random() * 20
-      });
-    }
-  }
-
-  document.body.addEventListener("click", e => {
-    createExplosion(e.clientX, e.clientY);
-  });
-
-  document.body.addEventListener("touchstart", e => {
-    const touch = e.touches[0];
-    createExplosion(touch.clientX, touch.clientY);
-  });
-
-  function drawFireworks() {
-    fireworks.forEach((p, index) => {
-      ctx.globalAlpha = p.alpha;
-      ctx.fillStyle = p.color;
-      ctx.font = `bold ${p.size}px monospace`;
-      ctx.fillText(p.text, p.x, p.y);
-      p.x += p.dx;
-      p.y += p.dy;
-      p.alpha -= 0.02;
-      if (p.alpha <= 0) fireworks.splice(index, 1);
-    });
-    ctx.globalAlpha = 1;
-  }
-
-  function draw() {
-    ctx.fillStyle = "rgba(5, 5, 5, 0.3)";
-    ctx.fillRect(0, 0, width, height);
-
-    drawGalaxy();
-    drawHearts();
-    drawFireworks();
-
-    if (Math.random() > 0.96) createHeart();
-    if (Math.random() > 0.98) createExplosion();
-
-    for (let i = 0; i < drops.length; i++) {
-      const x = i * fontSize * 4;
-      const y = drops[i] * fontSize;
-      ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
-      ctx.font = '16px monospace';
-      ctx.fillText("TE AMO MIA", x, y);
-
-      if (y > height && Math.random() > 0.975) drops[i] = 0;
-      drops[i]++;
-    }
-  }
-
-  setInterval(draw, 50);
-
-  window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-    columns = Math.floor(width / (fontSize * 4));
-    drops = new Array(columns).fill(1);
-  });
 </script>
 
 </body>
